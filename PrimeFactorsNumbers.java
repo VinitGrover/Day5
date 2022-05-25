@@ -1,21 +1,21 @@
 package com.bridgelabz;
 import java.util.Scanner;
 
-class PrimeFactorNumbers{
+class PrimeFactorNumbers {
     public static void main(String[] args) {
         System.out.print("Enter Number to find it's prime factors : ");
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
 
-        for(int i=2; i<n; i++ ) {
+        int i = 2;
+        while (i <= n) {
 
-            while(n%2==0){
+            if (n % i == 0) {
                 System.out.print(i + " ");
-                n/=i;
+                n /= i;
+                continue;
             }
-        }
-        if(n>2){
-            System.out.print(n);
+            i++;
         }
     }
 }
